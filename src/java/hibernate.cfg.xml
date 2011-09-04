@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/fdi_db</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">1234</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="FDI_Model/TipoGasto.hbm.xml"/>
+    <mapping resource="FDI_Model/PlazosIva.hbm.xml"/>
+    <mapping resource="FDI_Model/TipoBienServicio.hbm.xml"/>
+    <mapping resource="FDI_Model/EmpresaContratante.hbm.xml"/>
+    <mapping resource="FDI_Model/FacturaTipoGasto.hbm.xml"/>
+    <mapping resource="FDI_Model/ComprobanteRetencion.hbm.xml"/>
+    <mapping resource="FDI_Model/Formulario102a.hbm.xml"/>
+    <mapping resource="FDI_Model/PorcentajeRetencionIr.hbm.xml"/>
+    <mapping resource="FDI_Model/ComprobanteRetencionIva.hbm.xml"/>
+    <mapping resource="FDI_Model/IngresoFacturado.hbm.xml"/>
+    <mapping resource="FDI_Model/ComprobanteRetencionIr.hbm.xml"/>
+    <mapping resource="FDI_Model/Multas.hbm.xml"/>
+    <mapping resource="FDI_Model/Factura.hbm.xml"/>
+    <mapping resource="FDI_Model/Usuario.hbm.xml"/>
+    <mapping resource="FDI_Model/IngresoRelacionDependencia.hbm.xml"/>
+    <mapping resource="FDI_Model/PorcentajesSobreBaseIr.hbm.xml"/>
+    <mapping resource="FDI_Model/Formulario104a.hbm.xml"/>
+    <mapping resource="FDI_Model/Intereses.hbm.xml"/>
+    <mapping resource="FDI_Model/ProveedorCompra.hbm.xml"/>
+    <mapping resource="FDI_Model/Formulario107.hbm.xml"/>
+    <mapping resource="FDI_Model/Cliente.hbm.xml"/>
+    <mapping resource="FDI_Model/PlazosIr.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

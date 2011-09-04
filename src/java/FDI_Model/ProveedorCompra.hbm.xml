@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.ProveedorCompra" table="proveedor_compra" catalog="fdi_db">
+        <id name="idProveedorCompra" type="java.lang.Long">
+            <column name="ID_PROVEEDOR_COMPRA" />
+            <generator class="identity" />
+        </id>
+        <property name="rucCi" type="string">
+            <column name="RUC_CI" length="13" not-null="true" />
+        </property>
+        <property name="razonSocial" type="string">
+            <column name="RAZON_SOCIAL" length="45" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="100" not-null="true" />
+        </property>
+        <property name="ubiGoogleMaps" type="string">
+            <column name="UBI_GOOGLE_MAPS" length="100" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="TELEFONO" length="20" />
+        </property>
+        <set name="facturas" inverse="true">
+            <key>
+                <column name="ID_PROVEEDOR_COMPRA" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Factura" />
+        </set>
+    </class>
+</hibernate-mapping>

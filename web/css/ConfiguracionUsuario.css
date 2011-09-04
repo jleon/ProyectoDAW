@@ -1,0 +1,182 @@
+/* 
+    Document   : ConfiguracionUsuario
+    Created on : 12-ago-2011, 12:49:14
+    Author     : jleon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#icono {
+    float: left;
+    margin-left: 6em;
+    margin-right: -18em;
+    position: relative;
+}
+
+/****** PESTAÑAS ********/
+
+.elemento-lista-tabs {
+    text-decoration: none;
+    font-size: 2em;
+    list-style-type: none;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#lista-tabs {
+    float: left;
+    margin-top: 12em;
+    width: 25%;
+
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.elemento-lista-tabs a {
+    width: 12em;
+
+}
+#tabs-1 , #tabs-2 , #tabs-3 , #tabs-4 {
+    width: 72%;
+    float: left;
+    background: none repeat scroll 0 0 gray;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    border-radius: 33px;
+} 
+
+/********** TAB 1 *************/
+
+#contenido-tab1 {
+    margin-left: 8em;
+    margin-top: 8em;
+    width: 87%;
+}
+
+#contenido-tab2 {
+    margin-left: 8em;
+    margin-top: 8em;
+    width: 87%;
+}
+
+#contenido-tab3 {
+    margin-left: 8em;
+    margin-top: 8em;
+    width: 87%;
+}
+
+#contenido-tab4 {
+    margin-left: 8em;
+    margin-top: 8em;
+    width: 87%;
+}
+
+#Identificacion {
+    margin-left: 4em;
+}
+#TipoIdentificacion {
+    height: 2em;
+    margin-left: 1em;
+    width: 13.5em;
+}
+#RazonSocial {
+    margin-left: 8.6em;
+}
+#Provincia {
+    margin-left: 12.5em;
+}
+#Mail {
+    margin-left: 17.5em;
+}
+
+/********** TAB 2 *************/
+
+#TipoIdentificacionRepresentante {
+    height: 2em;
+    margin-left: 1em;
+    width: 13.5em;
+}
+
+#IdentificacionRepresentante {
+    margin-left: 4em;
+}
+
+/********** TAB 3 *************/
+
+#PeriodoIVA {
+    height: 2em;
+    margin-left: 1em;
+    width: 13.5em;
+}
+
+/********** TAB 4 *************/
+
+#diasIR {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 10em;
+}
+
+#diasIVA {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 10em;
+}
+
+/************************/
+
+.demo{
+    width: 1236px;
+    margin-left: auto;
+}
+
+label {
+    font-size: 2.2em;
+}
+
+input {
+    height: 2em;
+    font-size: 2em;
+    width: 30em;
+}
+
+#boton_guardar {
+    margin-left: 83em;
+    margin-top: 1.5em;
+    font-size: 200%;
+    font-weight: bold;
+    height: 3em;
+    width: 9em;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/******* Plantilla *************/
+
+#tabs {height: 46em; margin-top: 17em;} 
+.tabs-bottom { position: relative; } 
+.tabs-bottom .ui-tabs-panel { height: 37em; overflow: auto; } 
+.tabs-bottom .ui-tabs-nav { left: 0; bottom: 0; right:0; padding: 0.3em 0 0 0; } 
+.tabs-bottom .ui-tabs-nav li { margin-top: -0.1em !important; margin-bottom: 0.1em !important; border-top: none; border-bottom-width: 0.1em; }
+.ui-tabs-selected { margin-top: -3px !important; }

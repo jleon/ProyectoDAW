@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Formulario102a" table="formulario_102a" catalog="fdi_db">
+        <id name="idFormulario102a" type="java.lang.Long">
+            <column name="ID_FORMULARIO_102A" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <property name="c102" type="java.lang.Integer">
+            <column name="C102" />
+        </property>
+        <property name="c511" type="java.lang.Double">
+            <column name="C511" precision="22" scale="0" />
+        </property>
+        <property name="c521" type="java.lang.Double">
+            <column name="C521" precision="22" scale="0" />
+        </property>
+        <property name="c549" type="java.lang.Double">
+            <column name="C549" precision="22" scale="0" />
+        </property>
+        <property name="c541" type="java.lang.Double">
+            <column name="C541" precision="22" scale="0" />
+        </property>
+        <property name="c551" type="java.lang.Double">
+            <column name="C551" precision="22" scale="0" />
+        </property>
+        <property name="c632" type="java.lang.Double">
+            <column name="C632" precision="22" scale="0" />
+        </property>
+        <property name="c571" type="java.lang.Double">
+            <column name="C571" precision="22" scale="0" />
+        </property>
+        <property name="c572" type="java.lang.Double">
+            <column name="C572" precision="22" scale="0" />
+        </property>
+        <property name="c573" type="java.lang.Double">
+            <column name="C573" precision="22" scale="0" />
+        </property>
+        <property name="c575" type="java.lang.Double">
+            <column name="C575" precision="22" scale="0" />
+        </property>
+        <property name="c579" type="java.lang.Double">
+            <column name="C579" precision="22" scale="0" />
+        </property>
+        <property name="c832" type="java.lang.Double">
+            <column name="C832" precision="22" scale="0" />
+        </property>
+        <property name="c839" type="java.lang.Double">
+            <column name="C839" precision="22" scale="0" />
+        </property>
+        <property name="c852" type="java.lang.Double">
+            <column name="C852" precision="22" scale="0" />
+        </property>
+        <property name="c859" type="java.lang.Double">
+            <column name="C859" precision="22" scale="0" />
+        </property>
+        <property name="c869" type="java.lang.Double">
+            <column name="C869" precision="22" scale="0" />
+        </property>
+        <property name="c903" type="java.lang.Double">
+            <column name="C903" precision="22" scale="0" />
+        </property>
+        <property name="c904" type="java.lang.Double">
+            <column name="C904" precision="22" scale="0" />
+        </property>
+        <property name="c905" type="java.lang.Double">
+            <column name="C905" precision="22" scale="0" />
+        </property>
+        <property name="c999" type="java.lang.Double">
+            <column name="C999" precision="22" scale="0" />
+        </property>
+        <property name="fechaGeneracion" type="date">
+            <column name="FECHA_GENERACION" length="10" not-null="true" />
+        </property>
+        <property name="declaracionEfectuada" type="boolean">
+            <column name="DECLARACION_EFECTUADA" not-null="true" />
+        </property>
+        <property name="pagoEfectuado" type="boolean">
+            <column name="PAGO_EFECTUADO" not-null="true" />
+        </property>
+        <set name="formulario107s" inverse="true">
+            <key>
+                <column name="ID_FORMULARIO_102A" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Formulario107" />
+        </set>
+    </class>
+</hibernate-mapping>

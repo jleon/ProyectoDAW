@@ -1,0 +1,42 @@
+#description{
+    position:relative;
+    width: 40%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: solid;
+}
+
+#login{
+    position:relative;
+    width: 40%;
+    float: left;
+    padding: 5%;
+}
+
+#register{
+    position:relative;
+    width: 60%;
+    float: left;
+    border: solid;
+}
+
+#register h3{
+    position:relative;
+    float: left;
+    margin-left: 15%;
+}
+
+#register input{
+    position:relative;
+    float: left;
+    margin-left: 30%;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#register img{
+    position:relative;
+    float: left;
+    padding: 1em;
+}

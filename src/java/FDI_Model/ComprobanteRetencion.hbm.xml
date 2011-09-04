@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.ComprobanteRetencion" table="comprobante_retencion" catalog="fdi_db">
+        <id name="idComprobanteRetencion" type="java.lang.Long">
+            <column name="ID_COMPROBANTE_RETENCION" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroComprobante" type="int">
+            <column name="NUMERO_COMPROBANTE" not-null="true" />
+        </property>
+        <property name="totalRetenido" type="double">
+            <column name="TOTAL_RETENIDO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="imagenComprobante" type="binary">
+            <column name="IMAGEN_COMPROBANTE" />
+        </property>
+        <set name="comprobanteRetencionIrs" inverse="true">
+            <key>
+                <column name="ID_COMPROBANTE_RETENCION" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="FDI_Model.ComprobanteRetencionIr" />
+        </set>
+        <set name="ingresoFacturados" inverse="true">
+            <key>
+                <column name="ID_COMPROBANTE_RETENCION" />
+            </key>
+            <one-to-many class="FDI_Model.IngresoFacturado" />
+        </set>
+        <set name="comprobanteRetencionIvas" inverse="true">
+            <key>
+                <column name="ID_COMPROBANTE_RETENCION" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="FDI_Model.ComprobanteRetencionIva" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.EmpresaContratante" table="empresa_contratante" catalog="fdi_db">
+        <id name="idEmpresaContratante" type="java.lang.Long">
+            <column name="ID_EMPRESA_CONTRATANTE" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="45" not-null="true" />
+        </property>
+        <set name="ingresoRelacionDependencias" inverse="true">
+            <key>
+                <column name="ID_EMPRESA_CONTRATANTE" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.IngresoRelacionDependencia" />
+        </set>
+    </class>
+</hibernate-mapping>

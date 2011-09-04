@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.FacturaTipoGasto" table="factura_tipo_gasto" catalog="fdi_db">
+        <composite-id name="id" class="FDI_Model.FacturaTipoGastoId">
+            <key-property name="idFactura" type="long">
+                <column name="ID_FACTURA" />
+            </key-property>
+            <key-property name="idTipoGasto" type="long">
+                <column name="ID_TIPO_GASTO" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="factura" class="FDI_Model.Factura" update="false" insert="false" fetch="select">
+            <column name="ID_FACTURA" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tipoGasto" class="FDI_Model.TipoGasto" update="false" insert="false" fetch="select">
+            <column name="ID_TIPO_GASTO" not-null="true" />
+        </many-to-one>
+        <property name="valorDeducible" type="double">
+            <column name="VALOR_DEDUCIBLE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

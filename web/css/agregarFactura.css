@@ -1,0 +1,237 @@
+/* 
+    Document   : agregarFactura
+    Created on : 12/08/2011, 06:00:46 PM
+    Author     : Pedro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+
+.main_container{
+    margin:auto;
+    /*width:75%;*/
+	width:960px;
+    border:0.1em solid;    
+    position:relative;
+}
+
+
+
+.form_box_der{
+ position:relative;
+ float:left;
+ text-align:left;
+ display:block; 
+ width: 30em;
+ 
+ margin: 0.1em;
+ min-height: 2em;
+ 
+}
+.form_box_der div{
+    padding:0;
+    margin-right:5.5em;
+    float:right;
+}
+
+.form_box_izq{
+ position:relative; 
+ float:left;
+ display:block;
+ width: 9em;
+ text-align:left;
+ 
+ margin: 0.1em;
+ min-height: 2em;
+ clear:left;
+}
+
+.form_fila{
+  float:left;
+  clear:left;
+}
+
+
+.formulario{
+     padding: 1em;
+     position:relative;
+     display:block;
+     margin-left:3em;
+	 margin-right:3em;
+ }
+
+.ajuste{
+    clear:both;
+ }
+
+
+.main_container h1{
+    text-align:center;
+
+}
+.main_container h2{
+    margin:0;
+    margin-left:2em;
+    float:left;
+    font-size:1em;
+}
+.main_container h3{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-size:0.6em;
+}
+
+
+
+.form_fila a{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+
+.retencion {
+	margin:auto;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	position:relative;
+	display:block; 	
+	width:52em;
+	
+}
+
+.form_fila_der{
+	position:relative;
+	display:inline-block;
+	margin-right:0.5em;
+	float:right;		
+}
+
+.retencion  table{
+	border-collapse:collapse;
+	position:relative;        
+    margin:1em auto;
+    width:98%;
+}
+
+.retencion  td,
+.retencion th{
+	border:0.1em solid;   
+	text-align:center;
+}
+
+
+
+legend{
+	font-size:0.8em;	
+}
+
+.a_retencion{
+	text-decoration:none;	
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	width:52em;
+	position:relative;
+	display:inline-block;	
+}
+
+/*iNPUT DE LOS FORM*/
+/*
+input {
+    text-transform:uppercase;
+}*/
+input.text_box{ 
+    text-transform:uppercase;
+}
+
+
+
+/**************************************************************************
+ESTILOS PROPIOS DEL POPUP 20090323@JCP
+***************************************************************************/
+#capaContent {
+	display:block;
+	width:640px; 				/* Necesario para que el script centre la capa horizontalmente en la p�gina */
+	min-height:27em;				/* Necesario para que el script centre la capa verticalmente en la p�gina */
+	background-color:#FFF;
+	padding:0.5em;
+}
+
+.s_listado_clientes{
+	float:left;
+	
+}
+
+#capaContent h1{
+	text-align:center;
+}
+
+#capaContent h2{
+	margin:0.5em;
+	padding-top:0.5em;	
+	font-size:1em;
+	clear:left;
+	
+}
+
+#capaContent select{
+	display:inline-block;
+	width:15em;
+	float:left;	
+}
+
+#capaContent a{
+	float:left;	
+}
+
+#capaContent form{
+	padding: 1em;
+     position:relative;
+     display:block;
+     margin-left:0em;
+	 margin-right:0em;
+}
+
+#capaContent fieldset{
+	padding-top:1em;
+}
+
+#popUpDiv {
+	border:0.2em outset;
+}
+
+#capaContent form a{
+	font-size:0.7em;
+	clear:left;
+	margin-left:5.5em;
+}
+
+.datos_cliente{
+	position:relative;
+	display:block;
+	float:left;
+	width:20em;
+	margin-top:1em;
+	margin-left:2.5em;
+	
+}
+
+.datos_cliente .form_fila div{	
+	float:left;
+	width:8em;
+	
+}
+
+.datos_cliente .form_fila_der{
+	position:relative;
+	float:none;
+	margin:0 auto;
+	padding-top:1em;
+	margin-right:0.5em;
+}

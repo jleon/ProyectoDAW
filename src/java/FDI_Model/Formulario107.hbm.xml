@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Formulario107" table="formulario_107" catalog="fdi_db">
+        <id name="idFormulario107" type="java.lang.Long">
+            <column name="ID_FORMULARIO_107" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="formulario102a" class="FDI_Model.Formulario102a" fetch="select">
+            <column name="ID_FORMULARIO_102A" not-null="true" />
+        </many-to-one>
+        <property name="c102" type="java.lang.Integer">
+            <column name="C102" />
+        </property>
+        <property name="c103" type="date">
+            <column name="C103" length="10" />
+        </property>
+        <property name="c301" type="java.lang.Double">
+            <column name="C301" precision="22" scale="0" />
+        </property>
+        <property name="c303" type="java.lang.Double">
+            <column name="C303" precision="22" scale="0" />
+        </property>
+        <property name="c305" type="java.lang.Double">
+            <column name="C305" precision="22" scale="0" />
+        </property>
+        <property name="c307" type="java.lang.Double">
+            <column name="C307" precision="22" scale="0" />
+        </property>
+        <property name="c309" type="java.lang.Double">
+            <column name="C309" precision="22" scale="0" />
+        </property>
+        <property name="c311" type="java.lang.Double">
+            <column name="C311" precision="22" scale="0" />
+        </property>
+        <property name="c313" type="java.lang.Double">
+            <column name="C313" precision="22" scale="0" />
+        </property>
+        <property name="c315" type="java.lang.Double">
+            <column name="C315" precision="22" scale="0" />
+        </property>
+        <property name="c317" type="java.lang.Double">
+            <column name="C317" precision="22" scale="0" />
+        </property>
+        <property name="c319" type="java.lang.Double">
+            <column name="C319" precision="22" scale="0" />
+        </property>
+        <property name="c321" type="java.lang.Double">
+            <column name="C321" precision="22" scale="0" />
+        </property>
+        <property name="c323" type="java.lang.Double">
+            <column name="C323" precision="22" scale="0" />
+        </property>
+        <property name="c325" type="java.lang.Double">
+            <column name="C325" precision="22" scale="0" />
+        </property>
+        <property name="c327" type="java.lang.Double">
+            <column name="C327" precision="22" scale="0" />
+        </property>
+        <property name="c329" type="java.lang.Double">
+            <column name="C329" precision="22" scale="0" />
+        </property>
+        <property name="c331" type="java.lang.Double">
+            <column name="C331" precision="22" scale="0" />
+        </property>
+        <property name="c351" type="java.lang.Double">
+            <column name="C351" precision="22" scale="0" />
+        </property>
+        <property name="c353" type="java.lang.Double">
+            <column name="C353" precision="22" scale="0" />
+        </property>
+        <property name="c401" type="java.lang.Double">
+            <column name="C401" precision="22" scale="0" />
+        </property>
+        <property name="c403" type="java.lang.Double">
+            <column name="C403" precision="22" scale="0" />
+        </property>
+        <property name="c405" type="java.lang.Double">
+            <column name="C405" precision="22" scale="0" />
+        </property>
+        <property name="c407" type="java.lang.Double">
+            <column name="C407" precision="22" scale="0" />
+        </property>
+        <property name="c409" type="java.lang.Double">
+            <column name="C409" precision="22" scale="0" />
+        </property>
+        <property name="c411" type="java.lang.Double">
+            <column name="C411" precision="22" scale="0" />
+        </property>
+        <property name="c413" type="java.lang.Double">
+            <column name="C413" precision="22" scale="0" />
+        </property>
+        <property name="c199" type="string">
+            <column name="C199" length="13" />
+        </property>
+        <property name="fechaGeneracion" type="date">
+            <column name="FECHA_GENERACION" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

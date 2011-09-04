@@ -1,0 +1,515 @@
+/* 
+    Document   : formulario104A
+    Created on : 02-sep-2011, 11:38:20
+    Author     : jleon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#pagina {
+    width: 1000px;
+    margin-top: 3em;
+    margin: auto;
+}
+
+#cabecera {
+    height: 8.1em;
+    background-color: cyan;
+    border-style: solid;
+}
+
+#cuerpo {
+    background-color: yellow;
+}
+
+/******** CABECERA **********/
+
+#titulo_izquierda {
+    float: left;
+    width: 25%;
+    height: 7.2em;
+    border-right-style: solid;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+#titulo_centro {
+    float: left;
+    width: 53.1%;
+    height: 8.3em;
+    border-right-style: solid;
+    padding-left: 1em;
+}
+
+#titulo_derecha {
+    float: left;
+    width: 15%;
+    height: 7.2em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+#Numero {
+    width: 10em;
+}
+
+/********** CUERPO ************/
+
+
+/********** bloque 100 ************/
+#bloque100 {
+    height: 9em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+.bloque10X {
+    float: left;
+    height: 2em;
+    border-style: solid;
+    border-width: 0.1em; 
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#bloque101 {
+    width: 11em;
+}
+
+#bloque102 {
+    width: 14em;
+}
+
+#bloque103 {
+    width: 19em;
+}
+
+#bloque104 {
+    width: 35em;
+}
+
+.bloque10X .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+    margin-right: 0.3em;
+}
+
+#anio {
+    width: 6em;
+}
+
+
+#anio , #semestre , #formulario_que_sustituye , #mes {
+    margin-top: 0.2em;
+}
+
+/********** bloque 200 ************/
+
+#bloque200 {
+    height: 9em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+.bloque20x .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+    margin-right: 0.3em;
+}
+
+.bloque20x {
+    float: left;
+    height: 2em;
+    border-style: solid;
+    border-width: 0.1em; 
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#bloque202 {
+    width: 32em;
+}
+
+#label_razon_social {
+    float: left;
+    width: 20em;
+    font-size: 0.7em;
+}
+
+#ruc , #razon_social {
+    margin-top: 0.2em;
+}
+
+#ruc {
+    margin-right: 2em;
+}
+
+/******************** bloque 400 *****************/
+
+#bloque400 {
+    height: 42em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+#bloque400 .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+.signo {
+    border-style: none solid solid none;
+    border-width: 0.1em;
+    float: left;
+    font-size: 0.7em;
+    height: 2.1em;
+    padding-left: 0.1em;
+    padding-top: 0.7em;
+    padding-right: 0.1em;
+}
+
+#bloque400 input {
+    width: 5em;
+    float: left;
+    margin-right: 0.4em; 
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-bottom-style: solid;
+    border-width: 0.1em;  
+}
+
+.bloque {
+    width: 19.3%;
+    float: left;
+}
+
+.bloque_descripcion {
+    border-style: none none solid solid;
+    border-width: 1px;
+    float: left;
+    font-size: 0.5em;
+    height: 3.2em;
+    padding-left: 0.4em;
+    padding-right: 0.2em;
+    padding-top: 0.7em;
+    width: 40%;
+}
+
+.margen_adelante_atras {
+    margin-left: 19.2%;
+    margin-right: 19%;
+    margin-bottom: 0.06em;
+}
+
+.margen_atras {
+    margin-right: 19%;
+    margin-bottom: 0.06em;
+}
+
+.margen_adelante {
+    margin-left: 19.2%;
+    margin-bottom: 0.06em;
+}
+
+/************ subbloque 400 **************/
+
+.subbloque400 {
+    border-width: 0.1em;
+}
+
+#b400A {
+    width: 40%;
+    border-right-style: solid;
+}
+
+#b400B {
+    width: 19%;
+    border-right-style: solid;
+}
+
+#b400C {
+    width: 19%;
+    border-right-style: solid;
+}
+
+#b400D {
+    width: 19%;
+}
+
+#b400A, #b400B, #b400C, #b400D {
+    float: left;
+    font-size: 0.7em;
+    padding-left: 0.2em;
+    padding-top: 0.7em;
+    border-width: 0.1em;
+    height: 1.9em;
+    
+    border-style: solid;
+    background-color: cyan;
+}
+
+/******** bloque 401 411 421 ************/
+
+/******** bloque 431 ************/
+
+#bloque431 label , #bloque432 label {
+    border-right-style: solid;
+}
+
+#p1 {
+    margin-top: 24.5em;
+    background-color: cyan;
+    
+}
+
+/*******  subbloque 400 parte 2********/
+
+.subbloque400pequenio {
+    float: left;
+    width: 30%;
+    height: 4em;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+.subbloque400pequenio .etiqueta {
+    font-size: 70%;
+    height: 3em;
+    border-bottom-style: solid;
+    border-width: 1px;
+    float: left;
+}
+
+
+/**************    Bloque 500   *****************/
+
+#bloque500 {
+    height: 60em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+
+#bloque500 input {
+    width: 5em;
+    float: left;
+    margin-right: 0.4em; 
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-bottom-style: solid;
+    border-width: 0.1em;  
+}
+
+#bloque500 .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+#bloque518 label , #bloque519 label , #bloque531 label, #bloque532 label, #bloque533_543 label , #bloque534_544 label {
+    border-right-style: solid;
+}
+
+.bloque_descripcion_grande{
+    border-style: solid none solid solid;
+    border-width: 1px;
+    float: left;
+    font-size: 0.5em;
+    height: 3.2em;
+    padding-left: 0.4em;
+    padding-right: 0.2em;
+    padding-top: 0.7em;
+    width: 78.6%;
+}
+
+#p2 {
+    margin-top: 27em;
+    background-color: cyan;
+}
+
+.subbloquepeqenio {
+    width: 33%;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.bloque_descripcion_pequenio{
+    
+    float: left;
+    font-size: 0.5em;
+    height: 3.2em;
+    padding-left: 0.4em;
+    padding-right: 0.2em;
+    padding-top: 0.7em;
+    width: 20%;
+}
+
+/******************** bloque 900 *****************/
+
+#bloque900 {
+    height: 31em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+#bloque900 .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+#bloque900 input {
+    width: 5em;
+    float: left;
+    margin-right: 0.4em; 
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-bottom-style: solid;
+    border-width: 0.1em;  
+}
+
+#p3 {
+    background-color: cyan;
+}
+
+#bloque900 .bloque {
+    width: 20%;
+}
+
+#p4 {
+    margin-right: 1em;
+    background-color: cyan;
+    margin-top: 16em;
+}
+
+#p5 {
+    background-color: cyan;
+    margin-top: 6em;
+}
+
+.bloque_mediano {
+    width: 25%;
+    float: left;
+}
+
+.bloque_mediano .signo{
+    width: 5em; 
+}
+
+
+/********** bloque final **********/
+
+#bloquefinal {
+    height: 18em;
+    padding: 1em;
+    margin: 1em;
+    border-style: solid;
+}
+
+#bloquefinal .num {
+    width: 4em;
+    height: 1.8em;
+    background-color: blue;
+    float: left;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.1em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+#bloquefinal input {
+    width: 30em;
+    height: 1.5em;
+    float: left; 
+    margin-top: 0.2em;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    border-style: solid;
+    border-width: 0.1em;  
+}
+
+#etiquetaNombre {   
+    float: left;
+    height: 1.5em;
+    border-style: solid;
+    border-width: 0.1em; 
+    padding: 0.4em 0.4em 0em 0.4em;
+    
+}
+
+#etiquetaCI {
+    float: left;
+    height: 1.5em;
+    border-style: solid;
+    border-width: 0.1em;  
+    padding: 0.4em 0.4em 0em 0.4em;
+}
+
+#nombre {
+    margin-right:  25em;
+}
+
+.botones {
+    margin-top: 5em;
+}
+
+#boton_cancelar {
+    float: left;
+    margin-left: 10em;
+}
+
+#boton_aceptar {
+    float: right;
+    margin-right: 10em;
+}

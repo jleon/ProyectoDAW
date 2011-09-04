@@ -1,0 +1,111 @@
+/* 
+    Document   : ingresosFacturados
+    Created on : 12/08/2011, 01:03:12 PM
+    Author     : Pedro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+.main_container{
+    margin:auto;
+    width:90%;
+    border:0.1em solid;
+    clear:both;
+
+}
+
+
+
+
+.filtro{
+    display:inline-block;
+    border:0.1em;
+    margin-bottom:1.5em;
+}
+
+.facturas_container{
+    border-collapse:collapse;
+    position:relative;        
+    margin:1em auto;
+    width:98%;
+}
+
+.nueva_factura{
+    position:relative;
+    display:inline-block;
+    border:0.1em solid;
+    margin-left:0.2em;
+    padding-left:0.3em;
+    padding-right:0.3em;
+    width:98%;
+ }
+
+
+.nueva_factura h3, .nueva_factura p, .nueva_factura span{
+    margin:0;
+    margin-right:1em;
+    float:left;
+    display:inline;
+    /*position:relative;*/
+
+}
+
+.nueva_factura a{
+    float:right;
+    display:inline;
+    /*position:relative;*/
+
+}
+
+h1{
+    text-align:center;
+
+}
+h2{
+    margin:0;
+    margin-left:2em;
+    float:left;
+    font-size:1em;
+}
+
+
+div.consulta select{
+    float:left;
+}
+/*h3*/
+
+h3{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-size:0.6em;
+}
+div.nueva_factura h3{
+    text-decoration:none;
+    padding:0.3em;
+    text-align:center;
+    font-size:1em;
+}
+
+/*th*/
+
+td,th{
+    border:0.1em solid;
+    text-align:center;
+}
+.th_imgB{
+  border:0;
+}
+
+.td_desc{
+    text-align:justify;
+}
+
+

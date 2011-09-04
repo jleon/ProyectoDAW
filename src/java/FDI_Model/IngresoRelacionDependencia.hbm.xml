@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.IngresoRelacionDependencia" table="ingreso_relacion_dependencia" catalog="fdi_db">
+        <id name="idIngresoRelacionDependencia" type="java.lang.Long">
+            <column name="ID_INGRESO_RELACION_DEPENDENCIA" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empresaContratante" class="FDI_Model.EmpresaContratante" fetch="select">
+            <column name="ID_EMPRESA_CONTRATANTE" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="FECHA" length="10" not-null="true" />
+        </property>
+        <property name="ingConcepto" type="string">
+            <column name="ING_CONCEPTO" length="60" not-null="true" />
+        </property>
+        <property name="ingValor" type="double">
+            <column name="ING_VALOR" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="ingTipo" type="string">
+            <column name="ING_TIPO" length="30" not-null="true" />
+        </property>
+        <property name="egrConcepto" type="string">
+            <column name="EGR_CONCEPTO" length="60" not-null="true" />
+        </property>
+        <property name="egrValor" type="double">
+            <column name="EGR_VALOR" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="egrTipo" type="string">
+            <column name="EGR_TIPO" length="30" not-null="true" />
+        </property>
+        <property name="liquidoRecibido" type="double">
+            <column name="LIQUIDO_RECIBIDO" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

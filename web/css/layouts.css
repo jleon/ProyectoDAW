@@ -1,0 +1,47 @@
+#container{
+    position:relative;
+    width:90%;
+    float:left;
+    margin-left: 5%;
+}
+
+#general-menu{
+    position:relative;
+    width:100%;
+    float:left;
+    padding: 1%;
+}
+
+#general-menu ul li{
+    display: inline;
+}
+
+#header{
+    position:relative;
+    width:100%;
+    float: left;
+}
+
+#header img{
+    position:relative;
+    padding: 0.5em;
+    float:left;
+}
+
+#header h1{
+    position:relative;
+    float:left;
+}
+
+#content-container{
+    position:relative;
+    width: 100%;
+    float: left;
+}
+
+#footer{
+    position:relative;
+    width:100%;
+    float:left;
+    margin-left: 5%;
+}

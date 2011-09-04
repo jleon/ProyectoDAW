@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Intereses" table="intereses" catalog="fdi_db">
+        <id name="idIntereses" type="java.lang.Long">
+            <column name="ID_INTERESES" />
+            <generator class="identity" />
+        </id>
+        <property name="anio" type="int">
+            <column name="ANIO" not-null="true" />
+        </property>
+        <property name="trimestre1" type="double">
+            <column name="TRIMESTRE_1" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="trimestre2" type="double">
+            <column name="TRIMESTRE_2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="trimestre3" type="double">
+            <column name="TRIMESTRE_3" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="trimestre4" type="double">
+            <column name="TRIMESTRE_4" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

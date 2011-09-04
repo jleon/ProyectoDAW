@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.ComprobanteRetencionIva" table="comprobante_retencion_iva" catalog="fdi_db">
+        <id name="idComprobanteRetencion" type="long">
+            <column name="ID_COMPROBANTE_RETENCION" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="comprobanteRetencion" class="FDI_Model.ComprobanteRetencion" update="false" insert="false" fetch="select">
+            <column name="ID_COMPROBANTE_RETENCION" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="anio" type="int">
+            <column name="ANIO" not-null="true" />
+        </property>
+        <property name="mes" type="int">
+            <column name="MES" not-null="true" />
+        </property>
+        <property name="baseImponible" type="double">
+            <column name="BASE_IMPONIBLE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="porcentajeRetencion" type="double">
+            <column name="PORCENTAJE_RETENCION" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="valorRetenido" type="double">
+            <column name="VALOR_RETENIDO" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

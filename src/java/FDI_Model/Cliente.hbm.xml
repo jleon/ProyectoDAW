@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Cliente" table="cliente" catalog="fdi_db">
+        <id name="idCliente" type="java.lang.Long">
+            <column name="ID_CLIENTE" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="45" not-null="true" />
+        </property>
+        <property name="rucCi" type="string">
+            <column name="RUC_CI" length="13" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="100" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="TELEFONO" length="15" not-null="true" />
+        </property>
+        <set name="ingresoFacturados" inverse="true">
+            <key>
+                <column name="ID_CLIENTE" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.IngresoFacturado" />
+        </set>
+    </class>
+</hibernate-mapping>

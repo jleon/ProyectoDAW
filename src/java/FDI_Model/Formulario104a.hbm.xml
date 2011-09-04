@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Formulario104a" table="formulario_104a" catalog="fdi_db">
+        <id name="idFormulario104a" type="java.lang.Long">
+            <column name="ID_FORMULARIO_104A" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <property name="c101" type="java.lang.Integer">
+            <column name="C101" />
+        </property>
+        <property name="c102" type="java.lang.Integer">
+            <column name="C102" />
+        </property>
+        <property name="c103" type="java.lang.Integer">
+            <column name="C103" />
+        </property>
+        <property name="c104" type="java.lang.Integer">
+            <column name="C104" />
+        </property>
+        <property name="c201" type="string">
+            <column name="C201" length="13" />
+        </property>
+        <property name="c202" type="string">
+            <column name="C202" length="100" />
+        </property>
+        <property name="c401" type="java.lang.Double">
+            <column name="C401" precision="22" scale="0" />
+        </property>
+        <property name="c402" type="java.lang.Double">
+            <column name="C402" precision="22" scale="0" />
+        </property>
+        <property name="c403" type="java.lang.Double">
+            <column name="C403" precision="22" scale="0" />
+        </property>
+        <property name="c404" type="java.lang.Double">
+            <column name="C404" precision="22" scale="0" />
+        </property>
+        <property name="c405" type="java.lang.Double">
+            <column name="C405" precision="22" scale="0" />
+        </property>
+        <property name="c406" type="java.lang.Double">
+            <column name="C406" precision="22" scale="0" />
+        </property>
+        <property name="c409" type="java.lang.Double">
+            <column name="C409" precision="22" scale="0" />
+        </property>
+        <property name="c411" type="java.lang.Double">
+            <column name="C411" precision="22" scale="0" />
+        </property>
+        <property name="c412" type="java.lang.Double">
+            <column name="C412" precision="22" scale="0" />
+        </property>
+        <property name="c413" type="java.lang.Double">
+            <column name="C413" precision="22" scale="0" />
+        </property>
+        <property name="c414" type="java.lang.Double">
+            <column name="C414" precision="22" scale="0" />
+        </property>
+        <property name="c415" type="java.lang.Double">
+            <column name="C415" precision="22" scale="0" />
+        </property>
+        <property name="c416" type="java.lang.Double">
+            <column name="C416" precision="22" scale="0" />
+        </property>
+        <property name="c419" type="java.lang.Double">
+            <column name="C419" precision="22" scale="0" />
+        </property>
+        <property name="c421" type="java.lang.Double">
+            <column name="C421" precision="22" scale="0" />
+        </property>
+        <property name="c422" type="java.lang.Double">
+            <column name="C422" precision="22" scale="0" />
+        </property>
+        <property name="c429" type="java.lang.Double">
+            <column name="C429" precision="22" scale="0" />
+        </property>
+        <property name="c431" type="java.lang.Double">
+            <column name="C431" precision="22" scale="0" />
+        </property>
+        <property name="c432" type="java.lang.Double">
+            <column name="C432" precision="22" scale="0" />
+        </property>
+        <property name="c433" type="java.lang.Double">
+            <column name="C433" precision="22" scale="0" />
+        </property>
+        <property name="c434" type="java.lang.Double">
+            <column name="C434" precision="22" scale="0" />
+        </property>
+        <property name="c443" type="java.lang.Double">
+            <column name="C443" precision="22" scale="0" />
+        </property>
+        <property name="c444" type="java.lang.Double">
+            <column name="C444" precision="22" scale="0" />
+        </property>
+        <property name="c480" type="java.lang.Double">
+            <column name="C480" precision="22" scale="0" />
+        </property>
+        <property name="c481" type="java.lang.Double">
+            <column name="C481" precision="22" scale="0" />
+        </property>
+        <property name="c482" type="java.lang.Double">
+            <column name="C482" precision="22" scale="0" />
+        </property>
+        <property name="c483" type="java.lang.Double">
+            <column name="C483" precision="22" scale="0" />
+        </property>
+        <property name="c484" type="java.lang.Double">
+            <column name="C484" precision="22" scale="0" />
+        </property>
+        <property name="c485" type="java.lang.Double">
+            <column name="C485" precision="22" scale="0" />
+        </property>
+        <property name="c499" type="java.lang.Double">
+            <column name="C499" precision="22" scale="0" />
+        </property>
+        <property name="c501" type="java.lang.Double">
+            <column name="C501" precision="22" scale="0" />
+        </property>
+        <property name="c503" type="java.lang.Double">
+            <column name="C503" precision="22" scale="0" />
+        </property>
+        <property name="c507" type="java.lang.Double">
+            <column name="C507" precision="22" scale="0" />
+        </property>
+        <property name="c509" type="java.lang.Double">
+            <column name="C509" precision="22" scale="0" />
+        </property>
+        <property name="c511" type="java.lang.Double">
+            <column name="C511" precision="22" scale="0" />
+        </property>
+        <property name="c512" type="java.lang.Double">
+            <column name="C512" precision="22" scale="0" />
+        </property>
+        <property name="c513" type="java.lang.Double">
+            <column name="C513" precision="22" scale="0" />
+        </property>
+        <property name="c517" type="java.lang.Double">
+            <column name="C517" precision="22" scale="0" />
+        </property>
+        <property name="c518" type="java.lang.Double">
+            <column name="C518" precision="22" scale="0" />
+        </property>
+        <property name="c519" type="java.lang.Double">
+            <column name="C519" precision="22" scale="0" />
+        </property>
+        <property name="c521" type="java.lang.Double">
+            <column name="C521" precision="22" scale="0" />
+        </property>
+        <property name="c522" type="java.lang.Double">
+            <column name="C522" precision="22" scale="0" />
+        </property>
+        <property name="c523" type="java.lang.Double">
+            <column name="C523" precision="22" scale="0" />
+        </property>
+        <property name="c529" type="java.lang.Double">
+            <column name="C529" precision="22" scale="0" />
+        </property>
+        <property name="c531" type="java.lang.Double">
+            <column name="C531" precision="22" scale="0" />
+        </property>
+        <property name="c532" type="java.lang.Double">
+            <column name="C532" precision="22" scale="0" />
+        </property>
+        <property name="c533" type="java.lang.Double">
+            <column name="C533" precision="22" scale="0" />
+        </property>
+        <property name="c534" type="java.lang.Double">
+            <column name="C534" precision="22" scale="0" />
+        </property>
+        <property name="c543" type="java.lang.Double">
+            <column name="C543" precision="22" scale="0" />
+        </property>
+        <property name="c544" type="java.lang.Double">
+            <column name="C544" precision="22" scale="0" />
+        </property>
+        <property name="c553" type="java.lang.Double">
+            <column name="C553" precision="22" scale="0" />
+        </property>
+        <property name="c554" type="java.lang.Double">
+            <column name="C554" precision="22" scale="0" />
+        </property>
+        <property name="c601" type="java.lang.Double">
+            <column name="C601" precision="22" scale="0" />
+        </property>
+        <property name="c602" type="java.lang.Double">
+            <column name="C602" precision="22" scale="0" />
+        </property>
+        <property name="c605" type="java.lang.Double">
+            <column name="C605" precision="22" scale="0" />
+        </property>
+        <property name="c607" type="java.lang.Double">
+            <column name="C607" precision="22" scale="0" />
+        </property>
+        <property name="c609" type="java.lang.Double">
+            <column name="C609" precision="22" scale="0" />
+        </property>
+        <property name="c611" type="java.lang.Double">
+            <column name="C611" precision="22" scale="0" />
+        </property>
+        <property name="c615" type="java.lang.Double">
+            <column name="C615" precision="22" scale="0" />
+        </property>
+        <property name="c617" type="java.lang.Double">
+            <column name="C617" precision="22" scale="0" />
+        </property>
+        <property name="c619" type="java.lang.Double">
+            <column name="C619" precision="22" scale="0" />
+        </property>
+        <property name="c621" type="java.lang.Double">
+            <column name="C621" precision="22" scale="0" />
+        </property>
+        <property name="c699" type="java.lang.Double">
+            <column name="C699" precision="22" scale="0" />
+        </property>
+        <property name="c890" type="java.lang.Double">
+            <column name="C890" precision="22" scale="0" />
+        </property>
+        <property name="c897" type="java.lang.Double">
+            <column name="C897" precision="22" scale="0" />
+        </property>
+        <property name="c898" type="java.lang.Double">
+            <column name="C898" precision="22" scale="0" />
+        </property>
+        <property name="c899" type="java.lang.Double">
+            <column name="C899" precision="22" scale="0" />
+        </property>
+        <property name="c902" type="java.lang.Double">
+            <column name="C902" precision="22" scale="0" />
+        </property>
+        <property name="c903" type="java.lang.Double">
+            <column name="C903" precision="22" scale="0" />
+        </property>
+        <property name="c904" type="java.lang.Double">
+            <column name="C904" precision="22" scale="0" />
+        </property>
+        <property name="c999" type="java.lang.Double">
+            <column name="C999" precision="22" scale="0" />
+        </property>
+        <property name="c905" type="java.lang.Double">
+            <column name="C905" precision="22" scale="0" />
+        </property>
+        <property name="c906" type="java.lang.Double">
+            <column name="C906" precision="22" scale="0" />
+        </property>
+        <property name="c907" type="java.lang.Double">
+            <column name="C907" precision="22" scale="0" />
+        </property>
+        <property name="c908" type="java.lang.Double">
+            <column name="C908" precision="22" scale="0" />
+        </property>
+        <property name="c909" type="java.lang.Double">
+            <column name="C909" precision="22" scale="0" />
+        </property>
+        <property name="c910" type="java.lang.Double">
+            <column name="C910" precision="22" scale="0" />
+        </property>
+        <property name="c911" type="java.lang.Double">
+            <column name="C911" precision="22" scale="0" />
+        </property>
+        <property name="c912" type="java.lang.Double">
+            <column name="C912" precision="22" scale="0" />
+        </property>
+        <property name="c913" type="java.lang.Double">
+            <column name="C913" precision="22" scale="0" />
+        </property>
+        <property name="c914" type="java.lang.Double">
+            <column name="C914" precision="22" scale="0" />
+        </property>
+        <property name="c915" type="java.lang.Double">
+            <column name="C915" precision="22" scale="0" />
+        </property>
+        <property name="c916" type="java.lang.Double">
+            <column name="C916" precision="22" scale="0" />
+        </property>
+        <property name="c917" type="java.lang.Double">
+            <column name="C917" precision="22" scale="0" />
+        </property>
+        <property name="c918" type="java.lang.Double">
+            <column name="C918" precision="22" scale="0" />
+        </property>
+        <property name="c919" type="java.lang.Double">
+            <column name="C919" precision="22" scale="0" />
+        </property>
+        <property name="c921" type="string">
+            <column name="C921" length="20" />
+        </property>
+        <property name="c922" type="string">
+            <column name="C922" length="40" />
+        </property>
+        <property name="fechaGeneracion" type="date">
+            <column name="FECHA_GENERACION" length="10" not-null="true" />
+        </property>
+        <property name="declaracionEfectuada" type="boolean">
+            <column name="DECLARACION_EFECTUADA" not-null="true" />
+        </property>
+        <property name="pagoEfectuado" type="boolean">
+            <column name="PAGO_EFECTUADO" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Factura" table="factura" catalog="fdi_db">
+        <id name="idFactura" type="java.lang.Long">
+            <column name="ID_FACTURA" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tipoBienServicio" class="FDI_Model.TipoBienServicio" fetch="select">
+            <column name="ID_TIPO_BIEN_SERVICIO" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <many-to-one name="proveedorCompra" class="FDI_Model.ProveedorCompra" fetch="select">
+            <column name="ID_PROVEEDOR_COMPRA" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="string">
+            <column name="FECHA" length="45" not-null="true" />
+        </property>
+        <property name="subtotal0" type="double">
+            <column name="SUBTOTAL_0" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="subtotalIva" type="double">
+            <column name="SUBTOTAL_IVA" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="derechoCredito" type="boolean">
+            <column name="DERECHO_CREDITO" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="facturaTipoGastos" inverse="true">
+            <key>
+                <column name="ID_FACTURA" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.FacturaTipoGasto" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+/* 
+    Document   : AdministracionEgresos
+    Created on : 16/08/2011, 11:59:05 PM
+    Author     : jleon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/  
+
+root { 
+    display: block;
+}
+
+#wrapper {
+    width: 800px;
+    margin: auto;
+    margin-top: 6em;
+    border-style: double;
+    border-width: 3px;
+    min-height: 400px;
+    
+}
+
+#div_derecha {
+    margin-right: 2%;
+    width: 40%;
+    float: right;
+    border-style: groove;
+    border-width: 2px;
+    padding-left: 2em;
+    padding-top: 1em;
+    min-height: 10em;
+}
+
+#div_izquierda {
+    margin-left: 2%;
+    width: 40%;
+    float: left;
+    border-style: groove;
+    border-width: 2px;
+    padding-left: 2em;
+    padding-top: 1em;
+    min-height: 10em;
+}
+
+h1 {
+    margin-left: 30%;
+}

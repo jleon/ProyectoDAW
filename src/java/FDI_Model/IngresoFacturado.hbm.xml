@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.IngresoFacturado" table="ingreso_facturado" catalog="fdi_db">
+        <id name="idIngresoFacturado" type="java.lang.Long">
+            <column name="ID_INGRESO_FACTURADO" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="FDI_Model.Usuario" fetch="select">
+            <column name="ID_USUARIO" not-null="true" />
+        </many-to-one>
+        <many-to-one name="comprobanteRetencion" class="FDI_Model.ComprobanteRetencion" fetch="select">
+            <column name="ID_COMPROBANTE_RETENCION" />
+        </many-to-one>
+        <many-to-one name="cliente" class="FDI_Model.Cliente" fetch="select">
+            <column name="ID_CLIENTE" not-null="true" />
+        </many-to-one>
+        <property name="tipo" type="string">
+            <column name="TIPO" length="13" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="FECHA" length="10" not-null="true" />
+        </property>
+        <property name="numeroFactura" type="int">
+            <column name="NUMERO_FACTURA" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="DESCRIPCION" length="150" not-null="true" />
+        </property>
+        <property name="subtotal0" type="double">
+            <column name="SUBTOTAL_0" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="subtotalIva" type="double">
+            <column name="SUBTOTAL_IVA" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="imagenFactura" type="binary">
+            <column name="IMAGEN_FACTURA" />
+        </property>
+        <property name="totalRecibido" type="double">
+            <column name="TOTAL_RECIBIDO" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

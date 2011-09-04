@@ -1,0 +1,69 @@
+/* 
+    Document   : AdministracionIngresos
+    Created on : 17/08/2011, 01:09:06 AM
+    Author     : jleon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+#wrapper {
+    width: 800px;
+    margin: auto;
+    margin-top: 6em;
+    border-style: double;
+    border-width: 3px;
+    min-height: 400px;
+    
+}
+
+#div_derecha {
+    margin-right: 2%;
+    width: 24%;
+    float: right;
+    border-style: groove;
+    border-width: 2px;
+    padding-left: 2em;
+    padding-top: 1em;
+     min-height: 10em;
+     margin-left: 2%;
+}
+
+#div_izquierda {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 24%;
+    float: left;
+    border-style: groove;
+    border-width: 2px;
+    padding-left: 2em;
+    padding-top: 1em;
+    min-height: 10em;
+}
+
+#div_centro{
+    
+    
+    width: 26.5%;
+    float: left;
+    border-style: groove;
+    border-width: 2px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    min-height: 10em;
+}
+
+h1 {
+    margin-left: 13%;
+}
+

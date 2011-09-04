@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="fdi_db"/>
+  <table-filter match-name="tipo_gasto"/>
+  <table-filter match-name="ingreso_facturado"/>
+  <table-filter match-name="cliente"/>
+  <table-filter match-name="intereses"/>
+  <table-filter match-name="plazos_iva"/>
+  <table-filter match-name="comprobante_retencion_ir"/>
+  <table-filter match-name="comprobante_retencion_iva"/>
+  <table-filter match-name="factura"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="formulario_102a"/>
+  <table-filter match-name="porcentajes_sobre_base_ir"/>
+  <table-filter match-name="factura_tipo_gasto"/>
+  <table-filter match-name="proveedor_compra"/>
+  <table-filter match-name="empresa_contratante"/>
+  <table-filter match-name="formulario_104a"/>
+  <table-filter match-name="tipo_bien_servicio"/>
+  <table-filter match-name="plazos_ir"/>
+  <table-filter match-name="ingreso_relacion_dependencia"/>
+  <table-filter match-name="formulario_107"/>
+  <table-filter match-name="multas"/>
+  <table-filter match-name="porcentaje_retencion_ir"/>
+  <table-filter match-name="comprobante_retencion"/>
+</hibernate-reverse-engineering>

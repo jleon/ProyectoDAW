@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="FDI_Model.Usuario" table="usuario" catalog="fdi_db">
+        <id name="idUsuario" type="java.lang.Long">
+            <column name="ID_USUARIO" />
+            <generator class="identity" />
+        </id>
+        <property name="contrasenia" type="string">
+            <column name="CONTRASENIA" length="20" not-null="true" />
+        </property>
+        <property name="tipoIdentificacionUsuario" type="string">
+            <column name="TIPO_IDENTIFICACION_USUARIO" length="3" not-null="true" />
+        </property>
+        <property name="numIdentificacionUsuario" type="string">
+            <column name="NUM_IDENTIFICACION_USUARIO" length="13" not-null="true" />
+        </property>
+        <property name="razonSocial" type="string">
+            <column name="RAZON_SOCIAL" length="45" not-null="true" />
+        </property>
+        <property name="tipoIdentificacionContribuyente" type="string">
+            <column name="TIPO_IDENTIFICACION_CONTRIBUYENTE" length="3" not-null="true" />
+        </property>
+        <property name="numIdentificacionContribuyente" type="string">
+            <column name="NUM_IDENTIFICACION_CONTRIBUYENTE" length="13" not-null="true" />
+        </property>
+        <property name="periodoDeclaracionIva" type="string">
+            <column name="PERIODO_DECLARACION_IVA" length="9" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="40" />
+        </property>
+        <property name="provincia" type="string">
+            <column name="PROVINCIA" length="20" not-null="true" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="CIUDAD" length="20" not-null="true" />
+        </property>
+        <property name="alertaIva" type="boolean">
+            <column name="ALERTA_IVA" not-null="true" />
+        </property>
+        <property name="alertaIr" type="boolean">
+            <column name="ALERTA_IR" not-null="true" />
+        </property>
+        <set name="ingresoFacturados" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.IngresoFacturado" />
+        </set>
+        <set name="ingresoRelacionDependencias" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.IngresoRelacionDependencia" />
+        </set>
+        <set name="clientes" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Cliente" />
+        </set>
+        <set name="facturas" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Factura" />
+        </set>
+        <set name="formulario104as" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Formulario104a" />
+        </set>
+        <set name="formulario102as" inverse="true">
+            <key>
+                <column name="ID_USUARIO" not-null="true" />
+            </key>
+            <one-to-many class="FDI_Model.Formulario102a" />
+        </set>
+    </class>
+</hibernate-mapping>
