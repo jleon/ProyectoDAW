@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.List;
 import org.hibernate.FlushMode;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -145,6 +146,13 @@ public class FDIDB {
         Query q = session.createQuery("from ProveedorCompra as PC where PC.rucCi=: rucci ");
         q.setParameter("rucci", RucCI);
         result = (ProveedorCompra) q.uniqueResult();
+        return result;
+    }
+    
+    public List<ProveedorCompra> getListadoProveedores(){
+        List<ProveedorCompra> result= null;
+        Query q=  session.createQuery("from ProveedorCompra");
+        result = (List<ProveedorCompra>) q.list();
         return result;
     }
 }

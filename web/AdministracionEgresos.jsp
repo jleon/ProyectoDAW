@@ -79,7 +79,7 @@
             </div>
             <div class="nueva_factura">
                 <h3>Agregar NUEVA FACTURA</h3>
-                <a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/nuevaFact.png" alt="Nueva" title="Agregar una nueva factura" /></a>
+                <a href="Egresos.do?accion=FacturaNueva" onclick="" ><img src="images/nuevaFact.png" alt="Nueva" title="Agregar una nueva factura" /></a>
             </div>
         </div>
     </body>

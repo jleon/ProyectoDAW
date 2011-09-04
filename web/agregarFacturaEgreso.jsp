@@ -7,7 +7,7 @@ Author     : Juan
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,7 +23,7 @@ Author     : Juan
         <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
         <script>
 	$(function() {
-		$( "#fecha" ).datepicker();
+		$( "#fecha" ).datepicker({ dateFormat: 'dd/mm/yy' });
 	});
 	</script>
     </head>
@@ -31,7 +31,7 @@ Author     : Juan
         <div id="main_container" class="main_container">
             <h1>Factura</h1>
 
-            <form id="form_factura"  method="post" class="formulario" action="">
+            <form id="form_factura"  method="post" class="formulario" action="Egresos.do">
                 <fieldset>
                     <legend>Datos de la Factura</legend>
                     <div class="form_fila">
@@ -45,10 +45,16 @@ Author     : Juan
                     
                     <div class="form_fila">
                         <div class="form_box_izq">
-                            <label for="proveedor">Proveedor: </label>                            
+                            <label for="proveedor">Proveedor: </label>
+                            
                         </div>
                         <div class="form_box_der">              
-                            <input type="text" id="proveedor" name="proveedor"/>     
+                            <select id="proveedor" name="proveedor">
+                                <c:forEach var="Proveedores" items="${listaProveedores}">
+                                    <option value="${Proveedores.rucCi}"> ${Proveedores.rucCi}</option>
+                                </c:forEach>
+                                <option value="otro">Otro</option>
+                            </select>
                             <div>
                                 <label for="tipo">Tipo: </label>
                                 <select id="tipo" name="tipo">

@@ -11,6 +11,7 @@ import FDI_Model.TipoBienServicio;
 import FDI_Model.Usuario;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,13 +33,24 @@ public class AdministradorEgresos extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Date fecha=null;
-        boolean derecho_a_credito=false;
-        int nro_factura = 0 ;
-        double subtotal_cero=0, subtotal_iva=0, valor_deducible=0, total=0;
         
+        String accion = request.getParameter("accion");
         
-     
+        if(accion.equals("FacturaNueva")){
+            FDIDB db = new FDIDB();
+            db.beginTransaction();
+            List<ProveedorCompra> listaProveedores = db.getListadoProveedores();
+           
+            db.commit();
+            request.setAttribute("listaProveedores", listaProveedores);
+            request.getServletContext().getRequestDispatcher("/agregarFacturaEgreso.jsp").forward(request, response); 
+        }
+        if(accion.equals("GuardarFactura")){
+            Date fecha=null;
+            boolean derecho_a_credito=false;
+            int nro_factura = 0 ;
+            double subtotal_cero=0, subtotal_iva=0, valor_deducible=0, total=0;
+        
             // jquery valida que se ingrese solo números y el separador '/' (No valida algunas tildes)
             String fecha_tmp = request.getParameter("fecha");
             String proveedor = request.getParameter("proveedor");
@@ -85,12 +97,14 @@ public class AdministradorEgresos extends HttpServlet {
                     
                 }
             }
+        }
             
             
         
     }
     
     /** private boolean fechaStringCorrecta(String fecha)
+     *  @param fecha String 
      *  Verifica que el String que representa la fecha
      *  pueda ser convertido a date sin problema.
      *  No valida ingreso de letras.
