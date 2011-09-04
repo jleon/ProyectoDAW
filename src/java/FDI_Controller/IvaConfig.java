@@ -42,8 +42,8 @@ public class IvaConfig extends HttpServlet {
             pi.setFechaPublicacion(null);
             pi.setNovenoDigitoRuc(i);
             pi.setMensual(0);
-            pi.setSemestre1(null);
-            pi.setSemestre2(null);
+            pi.setSemestre1(0);
+            pi.setSemestre2(0);
             listaPlazosIva.add(i, pi);
         }
         
@@ -62,20 +62,60 @@ public class IvaConfig extends HttpServlet {
                 fecha.setDia(day);
                 fecha.setMes(sMonth);
                 fecha.setAnio(year);
-                System.out.println("AQUIIIIIIIIIIIIIIIIII-"+fecha.toDate());
-            }catch(Exception e){
-                fecha.setDia(0);
-                fecha.setMes(1);
-                fecha.setAnio(0);
-            }
-                                    
-            FDIDB db= new FDIDB();
-            db.beginTransaction();
-            listaPlazosIva= db.getPlazosIvaWithDate(fecha.getMySqlFormatDate(), "YYYY-MM-DD");
-            db.commit();
+                
+                FDIDB db= new FDIDB();
+                db.beginTransaction();
+                List<PlazosIva> tmp= db.getPlazosIvaWithDate(fecha.getMySqlFormatDate());
+                db.commit();
+                if(tmp.isEmpty()){
+                    request.setAttribute("searchError", "No existen plazos para la fecha indicada");
+                }
+                else{
+                    listaPlazosIva= tmp;
+                }            
+            }catch(Exception e){}
         }
         else if(action.equalsIgnoreCase("save")){
-            
+            Fecha fecha= new Fecha();
+            try{
+                int day= Integer.parseInt(request.getParameter("day"));
+                String sMonth= request.getParameter("month");
+                int year= Integer.parseInt(request.getParameter("year"));
+                fecha.setDia(day);
+                fecha.setMes(sMonth);
+                fecha.setAnio(year);
+                
+                for(int i=0; i<10; i++){
+                    int novenoDig= Integer.parseInt(request.getParameter("noveno-dig-"+i));
+                    int mensual= Integer.parseInt(request.getParameter("mensual-"+i));
+                    int semestre1= Integer.parseInt(request.getParameter("semestre1-"+i));
+                    int semestre2= Integer.parseInt(request.getParameter("semestre2-"+i));
+                    PlazosIva pi= new PlazosIva();
+                    pi.setFechaPublicacion(fecha.toDate());
+                    pi.setNovenoDigitoRuc(novenoDig);
+                    pi.setMensual(mensual);
+                    pi.setSemestre1(semestre1);
+                    pi.setSemestre2(semestre2);
+                    
+                    FDIDB db= new FDIDB();
+                    db.beginTransaction();
+                    List<PlazosIva> tmp= db.getPlazosIvaWithDateAndNovenoD(fecha.getMySqlFormatDate(), pi.getNovenoDigitoRuc());
+                    if(!(tmp.isEmpty())){
+                        PlazosIva t= tmp.get(0);
+                        t.setMensual(mensual);
+                        t.setNovenoDigitoRuc(novenoDig);
+                        t.setSemestre1(semestre1);
+                        t.setSemestre2(semestre2);
+                        db.update(t);
+                    }
+                    else{
+                        db.insert(pi);
+                    }
+                    db.commit();
+                }
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
         }
         else if(action.equalsIgnoreCase("cancel")){
             // Lista generada arriba

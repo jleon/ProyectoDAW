@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 4/09/2011 06:56:50 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="FDI_Model.TipoBienServicio" table="tipo_bien_servicio" catalog="fdi_db">
         <id name="idTipoBienServicio" type="java.lang.Long">

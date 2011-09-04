@@ -73,6 +73,7 @@
                             <br />
                         </fieldset>
                         <br />
+                        ${searchError}
                         <br />
                         <div id="iva-table">
                             <table border="1" cellpadding="5">
@@ -86,19 +87,27 @@
                                     <th>Segundo Semestre</th>
                                 </tr>
                                 <c:forEach var="counter" begin="1" end="9" step="1">
-                                    <tr>
-                                      <td>${counter}</td>
-                                      <td><input type="text" value="${listaPlazosIva[counter].mensual}" /> del siguiente mes</td>
-                                      <td><input type="text" value="${listaPlazosIva[counter].semestre1}" /> de Julio</td>
-                                      <td><input type="text" value="${listaPlazosIva[counter].semestre2}" /> de Enero</td>
-                                    </tr>
+                                    <c:forEach var="pi" items="${listaPlazosIva}">
+                                        <c:if test="${pi.novenoDigitoRuc == counter}">
+                                            <tr>
+                                              <td><input type="text" name="noveno-dig-${counter}" value="${counter}" /></td>
+                                              <td><input type="text" name="mensual-${counter}" value="${pi.mensual}" /> del siguiente mes</td>
+                                              <td><input type="text" name="semestre1-${counter}" value="${pi.semestre1}" /> de Julio</td>
+                                              <td><input type="text" name="semestre2-${counter}" value="${pi.semestre2}" /> de Enero</td>
+                                            </tr>
+                                        </c:if>
+                                    </c:forEach>
                                 </c:forEach>
-                                <tr>
-                                  <td>0</td>
-                                  <td><input type="text" value="${listaPlazosIva[0].mensual}" /> del siguiente mes</td>
-                                  <td><input type="text" value="${listaPlazosIva[counter].semestre1}" /> de Julio</td>
-                                  <td><input type="text" value="${listaPlazosIva[counter].semestre2}" /> de Enero</td>
-                                </tr>
+                                <c:forEach var="pi" items="${listaPlazosIva}">
+                                    <c:if test="${pi.novenoDigitoRuc == 0}">
+                                        <tr>
+                                          <td><input type="text" name="noveno-dig-0" value="0" /></td>
+                                          <td><input type="text" name="mensual-0" value="${pi.mensual}" /> del siguiente mes</td>
+                                          <td><input type="text" name="semestre1-0" value="${pi.semestre1}" /> de Julio</td>
+                                          <td><input type="text" name="semestre2-0" value="${pi.semestre2}" /> de Enero</td>
+                                        </tr>
+                                    </c:if>
+                                </c:forEach>
                             </table>
                             <br />
                             <br />

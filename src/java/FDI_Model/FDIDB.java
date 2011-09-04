@@ -123,12 +123,20 @@ public class FDIDB {
         return result;
     }
     
-    public List<PlazosIva> getPlazosIvaWithDate(String date, String format){
+    public List<PlazosIva> getPlazosIvaWithDate(String date){
         List<PlazosIva> result= null;
-        System.out.println(date);
-        Query q=  session.createQuery("from PlazosIva as pi where pi.fechaPublicacion = DATE_ADD('"+date+"', INTERVAL 0 DAY");
+        Query q=  session.createQuery("from PlazosIva as pi where pi.fechaPublicacion= :date");
+        q.setParameter("date", date);
         result= (List<PlazosIva>) q.list();
-        System.out.println(result);
+        return result;
+    }
+    
+    public List<PlazosIva> getPlazosIvaWithDateAndNovenoD(String date, int novenoDig){
+        List<PlazosIva> result= null;
+        Query q=  session.createQuery("from PlazosIva as pi where pi.fechaPublicacion= :date and pi.novenoDigitoRuc= :novenoDig");
+        q.setParameter("date", date);
+        q.setParameter("novenoDig", novenoDig);
+        result= (List<PlazosIva>) q.list();
         return result;
     }
     

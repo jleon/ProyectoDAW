@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23/08/2011 12:47:11 AM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 4/09/2011 06:56:50 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="FDI_Model.PlazosIva" table="plazos_iva" catalog="fdi_db">
         <id name="idPlazosIva" type="java.lang.Long">
@@ -17,11 +17,11 @@
         <property name="mensual" type="int">
             <column name="MENSUAL" not-null="true" />
         </property>
-        <property name="semestre1" type="date">
-            <column name="SEMESTRE_1" length="10" not-null="true" />
+        <property name="semestre1" type="int">
+            <column name="SEMESTRE_1" not-null="true" />
         </property>
-        <property name="semestre2" type="date">
-            <column name="SEMESTRE_2" length="10" not-null="true" />
+        <property name="semestre2" type="int">
+            <column name="SEMESTRE_2" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>
