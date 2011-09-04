@@ -3,7 +3,7 @@ Document   : agregarFacturaEgreso
 Created on : 16/08/2011, 10:26:25 PM
 Author     : Juan
 --%>
-
+ 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,7 +12,6 @@ Author     : Juan
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Agregar Factura</title>
-
         <link rel="stylesheet" type="text/css" href="css/agregarFactura.css" />
         <link rel="stylesheet" type="text/css" href="css/demos.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" />
@@ -20,17 +19,32 @@ Author     : Juan
         <script type="text/javascript" src="js/agregarFactura.js"></script>
         <script type="text/javascript" src="js/jquery.ui.core.js"></script>
         <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.position.js"></script>
         <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.autocomplete.js"></script>
         <script>
 	$(function() {
 		$( "#fecha" ).datepicker({ dateFormat: 'dd/mm/yy' });
+	});
+	</script>
+        <script>
+	$(function() {
+		var availableTags = [
+                    <c:forEach var="Proveedores" items="${listaProveedores}">
+                        "${Proveedores.rucCi}",
+                    </c:forEach>
+                        "Otro"
+		];
+		$( "#proveedor" ).autocomplete({
+			source: availableTags
+		});
 	});
 	</script>
     </head>
     <body >
         <div id="main_container" class="main_container">
             <h1>Factura</h1>
-
+            
             <form id="form_factura"  method="post" class="formulario" action="Egresos.do">
                 <fieldset>
                     <legend>Datos de la Factura</legend>
@@ -49,12 +63,7 @@ Author     : Juan
                             
                         </div>
                         <div class="form_box_der">              
-                            <select id="proveedor" name="proveedor">
-                                <c:forEach var="Proveedores" items="${listaProveedores}">
-                                    <option value="${Proveedores.rucCi}"> ${Proveedores.rucCi}</option>
-                                </c:forEach>
-                                <option value="otro">Otro</option>
-                            </select>
+                            <input type="text" id="proveedor" name="proveedor"/>
                             <div>
                                 <label for="tipo">Tipo: </label>
                                 <select id="tipo" name="tipo">
