@@ -14,9 +14,18 @@ Author     : Juan
         <title>Agregar Factura</title>
 
         <link rel="stylesheet" type="text/css" href="css/agregarFactura.css" />
-        <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/demos.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" />
+        <script type="text/javascript" src="js/jquery-1.6.2.js"></script>
         <script type="text/javascript" src="js/agregarFactura.js"></script>
-
+        <script type="text/javascript" src="js/jquery.ui.core.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+        <script>
+	$(function() {
+		$( "#fecha" ).datepicker();
+	});
+	</script>
     </head>
     <body >
         <div id="main_container" class="main_container">

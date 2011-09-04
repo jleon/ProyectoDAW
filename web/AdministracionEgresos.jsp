@@ -8,27 +8,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Administrador Egresos</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/AdministracionEgresos.css" type="text/css" rel="stylesheet"
-              <title>Administrador Egresos</title>
+        <link href="css/ingresosFacturados.css" type="text/css" rel="stylesheet"></link>
+        
     </head>
     <body>
-        <div id="wrapper">
-            <h1>ADMINISTRACIÓN DE EGRESOS</h1>
-            <div id="div_izquierda">
-                <label for="GestionDeFacturas">Gestion de facturas</label>
-                <ul id="GestionDeFacturas">
-                    <li id="NuevaFactura"><a href="agregarFacturaEgreso.jsp">Nueva Factura</a></li>
-                    <li id="ModificarFactura"><a href="agregarFacturaEgreso.jsp">Modificar Factura</a></li>
-                    <li id="EliminarFactura"><a href="EnConstruccion.jsp">Eliminar Factura</a></li>
-                </ul>
+        <div class="main_container">
+            <h1>Administrador de Egresos</h1>
+            <div class="consulta">
+                <div class="filtro">
+                    <h2 class="tit_consulta">Año: </h2>
+                    <select id="cmb_anio">
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option selected="selected">2011</option>
+                    </select>
+                    <h2 id="tit_consulta">Mes: </h2>
+                    <select class="cmb_mes">
+                        <option value="1" selected="selected" >Enero</option>
+                        <option value="2" >Febrero</option>
+                        <option value="3" >Marzo</option>
+                        <option value="4" >Abril</option>
+                        <option value="5" >Mayo</option>
+                        <option value="6" >Junio</option>
+                        <option value="7" >Julio</option>
+                        <option value="8" >Agosto</option>
+                        <option value="9" >Septiembre</option>
+                        <option value="10" >Octubre</option>
+                        <option value="11" >Noviembre</option>
+                        <option value="12" >Diciembre</option>
+                    </select>
+                </div>
+                
+                <table class="facturas_container">
+                    <tr>
+                        <th class="th_nro"><h3>Factura Nro: </h3></th>
+                        <th class="th_fecha"><h3>Fecha Emision: </h3></th>
+                        <th class="th_desc"><h3>Descripcion: </h3></th>
+                        <th colspan="2" class="th_imgB"></th>
+                    </tr>
+                    
+                    <tr class="factura_item" id="f1">                  
+                        <td class="td_nro"><span id="f1_nro">1</span></td>
+                        <td class="td_fecha"><span id="f1_fecha">01/Dic/2010</span></td>
+                        <td class="td_desc"><span id="f1_desc">Prestación de servicios en....</span></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/modificarFact.png" alt="Modificar" title="Modificar esta factura" /></a></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/eliminarFact.png" alt="Eliminar" title="Eliminar esta factura" /></a></td>
+                    </tr>
+                    <tr class="factura_item" id="f2">
+                        <td class="td_nro"><span id="f2_nro">13</span></td>
+                        <td class="td_fecha"><span id="f2_fecha">20/Dic/2010</span></td>
+                        <td class="td_desc"><span id="f2_desc">Concepto de construir....</span></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/modificarFact.png" alt="Modificar" title="Modificar esta factura" /></a></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/eliminarFact.png" alt="Eliminar" title="Eliminar esta factura" /></a></td>
+                        
+                    </tr>
+                    <tr class="factura_item" id="f3">
+                        <td class="td_nro"><span id="f3_nro">27</span></td>
+                        <td class="td_fecha"><span id="f3_fecha">28/Dic/2010</span></td>
+                        <td class="td_desc"><span id="f3_desc">Concepto de construir....</span></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/modificarFact.png" alt="Modificar" title="Modificar esta factura" /></a></td>
+                        <td class="td_imgB"><a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/eliminarFact.png" alt="Eliminar" title="Eliminar esta factura" /></a></td>
+                        
+                    </tr>
+                    
+                </table>
+                
             </div>
-            <div id="div_derecha">
-                <label for="ResumenDeFacturas">Resumen de facturas</label>
-                <ul id="GestionDeFacturas">
-                    <li id="PorMes"><a href="EnConstruccion.jsp">Por mes</a></li>
-                    <li id="Poranio"><a href="EnConstruccion.jsp">Por año</a></li>
-                </ul>
+            <div class="nueva_factura">
+                <h3>Agregar NUEVA FACTURA</h3>
+                <a href="agregarFacturaEgresos.jsp" onclick="" ><img src="images/nuevaFact.png" alt="Nueva" title="Agregar una nueva factura" /></a>
             </div>
         </div>
     </body>

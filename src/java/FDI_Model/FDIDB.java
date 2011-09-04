@@ -140,4 +140,11 @@ public class FDIDB {
         return result;
     }
     
+    public ProveedorCompra getProveedor(String RucCI) {
+        ProveedorCompra result = null;
+        Query q = session.createQuery("from ProveedorCompra as PC where PC.rucCi=: rucci ");
+        q.setParameter("rucci", RucCI);
+        result = (ProveedorCompra) q.uniqueResult();
+        return result;
+    }
 }
