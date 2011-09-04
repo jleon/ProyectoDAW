@@ -36,6 +36,10 @@ public class Fecha {
                 + this.getAnio();
     }
 
+    public java.util.Date toDate(){
+        return this.fecha.getTime();
+    }
+    
     /**
      * Este metodo permite obtener el tiempo en milisegundos
      * que represente al objeto actual de tipo Fecha tomando como 0 milisegundos
@@ -301,7 +305,7 @@ public class Fecha {
     public String mostrarFormatoSimple(){
         String dia,mes,anio;
         if(this.getDia()<10)
-            dia="0"+this.getDiaDeLaSemana();
+            dia="0"+this.getDia();
         else
             dia=""+this.getDia();
         if(this.getMesEntero()<10)
@@ -309,6 +313,20 @@ public class Fecha {
         else
             mes=""+this.getMesEntero();
         anio=""+this.getAnio();
-        return (dia+"/"+mes+"/"+anio);
+        return (anio+"/"+mes+"/"+dia);
+    }
+    
+    public String getMySqlFormatDate(){
+        String dia,mes,anio;
+        if(this.getDia()<10)
+            dia="0"+this.getDia();
+        else
+            dia=""+this.getDia();
+        if(this.getMesEntero()<10)
+            mes="0"+this.getMesEntero();
+        else
+            mes=""+this.getMesEntero();
+        anio=""+this.getAnio();
+        return (anio+"-"+mes+"-"+dia);
     }
 }

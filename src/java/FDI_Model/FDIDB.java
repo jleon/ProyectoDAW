@@ -4,6 +4,7 @@
  */
 package FDI_Model;
 
+import java.util.Date;
 import java.util.List;
 import org.hibernate.FlushMode;
 import org.hibernate.Query;
@@ -119,6 +120,15 @@ public class FDIDB {
         Cliente result= null;
         Query q=  session.createQuery("from Cliente as c where c.idCliente=( select max(cx.idCliente) from Cliente as cx)");             
         result= (Cliente) q.uniqueResult();
+        return result;
+    }
+    
+    public List<PlazosIva> getPlazosIvaWithDate(String date, String format){
+        List<PlazosIva> result= null;
+        System.out.println(date);
+        Query q=  session.createQuery("from PlazosIva as pi where pi.fechaPublicacion = DATE_ADD('"+date+"', INTERVAL 0 DAY");
+        result= (List<PlazosIva>) q.list();
+        System.out.println(result);
         return result;
     }
     

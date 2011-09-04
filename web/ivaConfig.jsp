@@ -19,6 +19,22 @@
         
         <link rel="stylesheet" type="text/css" href="css/layouts.css" />
         <link rel="stylesheet" type="text/css" href="css/ivaConfig.css" />
+        
+        <script type="text/javascript">
+            function saveSubmit(){
+                var form= document.getElementById("form-iva-config");
+                form.setAttribute("action", form.getAttribute("action")+"?action=save");
+                var submit= document.getElementById("submit-form-iva-config");
+                submit.click();
+            }
+            
+            function searchSubmit(){
+                var form= document.getElementById("form-iva-config");
+                form.setAttribute("action", form.getAttribute("action")+"?action=search");
+                var submit= document.getElementById("submit-form-iva-config");
+                submit.click();
+            }
+        </script>
     </head>
     <body>
         <div id="container">
@@ -29,8 +45,8 @@
                 <div id="description">
                     <h2>Plazos de declaración de impuestos</h2>
                 </div>
-                <div id="publication-date">
-                    <form id="form-publication-date" method="post" action="${pageContext.servletContext.contextPath}/IvaConfig.do">
+                <div id="iva-config">
+                    <form id="form-iva-config" method="post" action="${pageContext.servletContext.contextPath}/IvaConfig.do">
                         <fieldset>
                             <legend>Fecha de publicación:</legend>
                             <br />
@@ -53,7 +69,7 @@
                             </select>
                             <label for="year">Año: </label>
                             <input type="text" id="year" name="year" />
-                            <input type="button" value="Buscar" />
+                            <input type="button" value="Buscar" onclick="searchSubmit();" />
                             <br />
                         </fieldset>
                         <br />
@@ -73,15 +89,15 @@
                                     <tr>
                                       <td>${counter}</td>
                                       <td><input type="text" value="${listaPlazosIva[counter].mensual}" /> del siguiente mes</td>
-                                      <td>none</td>
-                                      <td>none</td>
+                                      <td><input type="text" value="${listaPlazosIva[counter].semestre1}" /> de Julio</td>
+                                      <td><input type="text" value="${listaPlazosIva[counter].semestre2}" /> de Enero</td>
                                     </tr>
                                 </c:forEach>
                                 <tr>
                                   <td>0</td>
                                   <td><input type="text" value="${listaPlazosIva[0].mensual}" /> del siguiente mes</td>
-                                  <td>none</td>
-                                  <td>none</td>
+                                  <td><input type="text" value="${listaPlazosIva[counter].semestre1}" /> de Julio</td>
+                                  <td><input type="text" value="${listaPlazosIva[counter].semestre2}" /> de Enero</td>
                                 </tr>
                             </table>
                             <br />
@@ -89,9 +105,9 @@
                         </div>
                         <div id="option-buttons">
                             <a href="${pageContext.servletContext.contextPath}/IvaConfig.do?action=new"><input type="button" value="Nuevo" /></a>
-                            <input type="button" value="Guardar" />
+                            <input type="button" value="Guardar" onclick="saveSubmit();" />
                             <a href="${pageContext.servletContext.contextPath}/IvaConfig.do?action=cancel"><input type="button" value="Cancelar" /></a>
-                            <input type="submit" value="Submit" />
+                            <input id="submit-form-iva-config" type="submit"></input>
                             <br />
                             <br />
                         </div>

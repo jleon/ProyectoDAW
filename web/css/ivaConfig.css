@@ -9,7 +9,7 @@
     margin-left: 10%;
 }
 
-#publication-date{
+#iva-config{
     position: relative;
     width: 75%;
     float: left;
@@ -19,7 +19,7 @@
 #iva-table{
     position: relative;
     width: 100%;
-    margin-left: 15%;
+    margin-left: 0%;
     float: left;
 }
 
@@ -28,4 +28,8 @@
     width: 100%;
     margin-left: 35%;
     float: left;
+}
+
+#submit-form-iva-config{
+    display:none;
 }
